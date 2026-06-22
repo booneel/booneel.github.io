@@ -242,7 +242,7 @@
   <!-- ===== TOP BAR ===== -->
   <header class="topbar">
     <div class="wrap">
-      <div class="brand">이정원<span class="dot">.</span></div>
+      <div class="brand">이정원</div>
     </div>
   </header>
 
@@ -255,7 +255,7 @@
           <span class="path">~/portfolio — bash</span>
         </div>
         <div class="term-body">
-          <div class="prompt"><span class="g">guest@sec</span>:<span class="c">~</span>$ whoami --role</div>
+          <div class="prompt"><span class="g">jeongwon@security</span>:<span class="c">~</span>$ whoami --role</div>
           <h1>시스템과 네트워크를<br><span class="hl">분석</span>하고 <span class="hl">방어</span>합니다</h1>
           <div class="role">// System Security &amp; Network · 신입 / 취업 준비생</div>
           <p class="lead">시스템 보안과 네트워크를 공부하며, 공격 기법을 직접 재현하고 방어까지 정리하는 실습으로 기초를 다지고 있습니다. 작은 취약점도 놓치지 않는 꼼꼼함을 가장 큰 무기로 생각합니다.<span class="cursor"></span></p>
@@ -424,11 +424,17 @@
           <div class="org">한국정보통신자격협회(ICQA)</div>
         </div>
         <div class="tl-item">
+          <div class="date">2026.05</div>
+          <h3>TOPCIT 459점 / 수준 3</h3>
+          <div class="org">정보통신기획평가원(IITP) · 제25회 정기평가</div>
+        </div>
+        <div class="tl-item is-hidden">
           <div class="date">2022.09</div>
           <h3>프로그래밍기능사</h3>
           <div class="org">한국산업인력공단(Q-Net)</div>
         </div>
       </div>
+      <button class="more-btn" data-target="certs">더 보기 <span class="more-count">+1</span></button>
     </section>
   </div>
 
@@ -466,7 +472,7 @@
           btn.firstChild.textContent = '접기 ';
         } else {
           // collapse: re-hide all but first 2 items
-          var items = section.querySelectorAll('.study-item, .proj');
+          var items = section.querySelectorAll('.study-item, .proj, .tl-item');
           items.forEach(function(el, i){ if(i >= 2) el.classList.add('is-hidden'); });
           btn.classList.remove('is-open');
           var count = items.length - 2;
